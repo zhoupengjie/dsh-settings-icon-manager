@@ -1,0 +1,33 @@
+{
+  "name": "dsh-settings-icon-manager",
+  "version": "0.1.0",
+  "description": "为 DSH 设置侧栏的第三方插件提供统一的语义化图标与本地样式配置。",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./src/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": ["@deepseek-ai/dsh-client-runtime", "@deepseek-ai/dsh-client-ui-slots"],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhoupengjie/dsh-settings-icon-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhoupengjie/dsh-settings-icon-manager/issues"
+  },
+  "homepage": "https://github.com/zhoupengjie/dsh-settings-icon-manager#readme",
+  "license": "MIT"
+}
