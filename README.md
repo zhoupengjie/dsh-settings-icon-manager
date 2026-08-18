@@ -1,26 +1,29 @@
 # dsh-settings-icon-manager
 
-为 DeepSeek Harness（DSH）设置侧栏提供统一的语义化图标。
+Semantic icons for third-party settings sections in [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH).
 
-## 功能
+[中文说明](README_CN.md)
 
-- 将第三方设置页的默认齿轮替换为线性语义图标。
-- 支持手机访问、快照、文件提及、Web UI 插件、皮肤中心、宠物和社区插件等常见设置项。
-- 在“图标管理”页面中为每项选择图标；内置约 50 个文件、开发、网络、安全、媒体与常用操作图标。
-- 图标选择器为 6 列多行布局，设置项采用两列紧凑排列。
-- 所有个性化设置仅保存在浏览器本地，不修改其他插件的源码。
+## Features
 
-## 安装
+- Replaces the default gear icon on third-party settings sections with meaningful outline icons.
+- Includes mappings for Mobile Access, Snapshots, File Mentions, Web UI Plugins, Skin Center, Pets, and Community Plugins.
+- Provides an **Icon Manager** settings page for choosing an icon per entry.
+- Includes about 50 icons across files, development, networking, security, media, organization, and common actions.
+- Uses a compact two-column entry layout and a six-column icon picker.
+- Stores preferences locally in the browser without modifying other plugins.
+
+## Install
 
 ```powershell
 dsh plugin --profile web add github:zhoupengjie/dsh-settings-icon-manager
 ```
 
-重启 `dsh web` 后，在设置侧栏打开“图标管理”。
+Restart `dsh web`, then open **Icon Manager** from the settings sidebar.
 
-## 开发
+## Development
 
-客户端代码位于 `src/client.js`。它通过设置侧栏的 DOM 观察机制替换默认图标，因此 DSH 更改设置侧栏内部结构时可能需要适配。
+The client code is in `src/client.js`. The plugin observes the settings sidebar DOM and replaces fallback icons, so it may need an update if DSH changes that internal structure.
 
 ## License
 
